@@ -51,13 +51,14 @@ GEM
   remote: https://rubygems.org/
   specs:
     CFPropertyList (2.3.1)
-    activesupport (6.0.3.1)
+    activesupport (6.1.7.5)
       concurrent-ruby (~> 1.0, >= 1.0.2)
-      i18n (>= 0.7, < 2)
-      minitest (~> 5.1)
-      tzinfo (~> 1.1)
-      zeitwerk (~> 2.2, >= 2.2.2)
-    addressable (2.3.7)
+      i18n (>= 1.6, < 2)
+      minitest (>= 5.1)
+      tzinfo (~> 2.0)
+      zeitwerk (~> 2.3)
+    addressable (2.8.0)
+      public_suffix (>= 2.0.2, < 5.0)
     autoparse (0.3.3)
       addressable (>= 2.3.1)
       extlib (>= 0.9.15)
@@ -80,7 +81,7 @@ GEM
     coderay (1.1.0)
     coercible (1.0.0)
       descendants_tracker (~> 0.0.1)
-    concurrent-ruby (1.1.6)
+    concurrent-ruby (1.3.5)
     crack (0.4.2)
       safe_yaml (~> 1.0.0)
     descendants_tracker (0.0.4)
@@ -92,7 +93,7 @@ GEM
     equalizer (0.0.11)
     excon (0.71.0)
     extlib (0.9.16)
-    facter (1.7.6)
+    facter (2.5.7)
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
     fission (0.5.0)
@@ -199,14 +200,14 @@ GEM
     hiera (1.3.4)
       json_pure
     hocon (0.0.7)
-    i18n (1.8.2)
+    i18n (1.14.7)
       concurrent-ruby (~> 1.0)
     ice_nine (0.11.1)
     inflecto (0.0.2)
     inifile (2.0.2)
     ipaddress (0.8.0)
     json (1.8.6)
-    json_pure (1.8.2)
+    json_pure (2.8.1)
     jwt (1.4.1)
     launchy (2.4.3)
       addressable (~> 2.3)
@@ -218,8 +219,8 @@ GEM
     metaclass (0.0.4)
     method_source (0.8.2)
     mime-types (2.4.3)
-    mini_portile2 (2.4.0)
-    minitest (5.14.1)
+    mini_portile2 (2.8.8)
+    minitest (5.25.4)
     mocha (1.1.0)
       metaclass (~> 0.0.1)
     multi_json (1.11.0)
@@ -227,13 +228,15 @@ GEM
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (2.9.2)
-    nokogiri (1.10.8)
-      mini_portile2 (~> 2.4.0)
+    nokogiri (1.18.3)
+      mini_portile2 (~> 2.8.2)
+      racc (~> 1.4)
     pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
-    puppet (3.7.4)
+    public_suffix (4.0.7)
+    puppet (3.7.5)
       facter (> 1.6, < 3)
       hiera (~> 1.0)
       json_pure
@@ -251,6 +254,7 @@ GEM
       puppet-syntax
       rake
       rspec-puppet
+    racc (1.8.1)
     rake (12.3.3)
     rbvmomi (1.8.2)
       builder
@@ -300,8 +304,8 @@ GEM
       net-ssh
     thread_safe (0.3.6)
     trollop (2.1.2)
-    tzinfo (1.2.7)
-      thread_safe (~> 0.1)
+    tzinfo (2.0.6)
+      concurrent-ruby (~> 1.0)
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.6)
@@ -313,7 +317,7 @@ GEM
     webmock (1.20.4)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
-    zeitwerk (2.3.0)
+    zeitwerk (2.7.2)
 
 PLATFORMS
   ruby
