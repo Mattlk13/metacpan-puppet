@@ -13,10 +13,14 @@ class metacpan::web::production(
   }
 
   file { "/home/${user}/metacpan-api/metacpan_server_local.conf":
+      ensure => absent,
+  }
+
+  file { "/home/${user}/metacpan-api/metacpan_server_local.yaml":
       ensure => file,
       owner => $user,
       group => $group,
-      source => "puppet:///private/metacpan-api/metacpan_server_local.conf",
+      source => "puppet:///private/metacpan-api/metacpan_server_local.yaml",
       require => Metacpan::Gitrepo['gitrepo_metacpan-api'], # after repo created
       notify => Starman::Service['metacpan-api'],
   }
